@@ -1,0 +1,12 @@
+Phase: TitleFinder
+Input: Token
+Options: control = first
+Rule: TitleFind
+(
+	{Token.string == "title"}
+	{Token.string == ">"}
+	({Token})* :value
+	{Token.string=="<"}
+)
+-->
+:value.ProductName ={title=:value@cleanString}

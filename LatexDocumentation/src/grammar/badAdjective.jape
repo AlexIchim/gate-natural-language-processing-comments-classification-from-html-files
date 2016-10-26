@@ -1,0 +1,21 @@
+Phase: AdjectiveFinderBad
+Input: Lookup Token
+Options: control = brill
+Rule: BadAdjectivesFinder
+(
+	{Token.string=="review-text"}
+	{Token.string=="\""}
+	{Token.string==">"}
+	
+	(
+		({Token})*
+		({Lookup.majorType == badcomment}):badAdj
+		({Token})*
+	)
+	
+	{Token.string=="<"}
+	{Token.string=="/"}
+	{Token.string=="span"}
+)
+-->
+:badAdj.BadAdjective ={rule= BadAdjectivesFinder }

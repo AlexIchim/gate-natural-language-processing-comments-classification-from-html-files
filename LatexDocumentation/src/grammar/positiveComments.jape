@@ -1,0 +1,26 @@
+Phase: PositiveCommentFinder
+Input: Token Lookup
+Options: control = first
+Rule: TitleFind
+(
+	{Token.string=="review-text"}
+	{Token.string=="\""}
+	{Token.string==">"}
+	({Token})* :commentValue
+	{Token.string=="<"}
+	{Token.string=="/"}
+	{Token.string=="span"}
+):CommentAnn
+
+-->
+{
+	AnnotationSet YtagAS = (AnnotationSet) bindings.get("commentValue");
+	
+	//get goodAdjective from the input comment annotation , itf exists make it a positive comment
+	AnnotationSet XtagAS = inputAS.get("GoodAdjective", YtagAS.firstNode().getOffset(), YtagAS.lastNode().getOffset());
+	
+	if (XtagAS.size() != 0 ) {
+		FeatureMap features = Factory.newFeatureMap();                  
+		outputAS.add(YtagAS.firstNode(), YtagAS.lastNode(), "PositiveComment", features);
+	}
+}

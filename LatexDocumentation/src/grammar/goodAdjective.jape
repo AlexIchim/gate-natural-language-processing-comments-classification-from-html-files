@@ -1,0 +1,21 @@
+Phase: AdjectiveFinder
+Input: Lookup Token
+Options: control = brill
+Rule: Test1
+(
+	{Token.string=="review-text"}
+	{Token.string=="\""}
+	{Token.string==">"}
+	
+	(
+		({Token})*
+		({Lookup.majorType == comment}):title
+		({Token})*
+	)
+	
+	{Token.string=="<"}
+	{Token.string=="/"}
+	{Token.string=="span"}
+)
+-->
+:title.GoodAdjective ={rule= Test1 }

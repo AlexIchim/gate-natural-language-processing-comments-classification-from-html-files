@@ -1,0 +1,1126 @@
+\documentclass[a4paper,12pt]{report}
+\usepackage{algorithmic}
+\usepackage[linesnumbered,ruled,vlined]{algorithm2e}
+\usepackage[margin=2cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{listings} 
+\usepackage{graphicx} 
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{cite}
+\usepackage{verbatim}
+\usepackage{float}
+\usepackage{listings}
+\lstset {
+  basicstyle=\small\ttfamily,
+  columns=flexible,
+  breaklines=true
+ }
+\newcommand{\currentdata}{14 February 2015}
+\newtheorem{example}{Example}
+
+\begin{document}
+\vspace{-5cm}
+\begin{center}
+Department of Computer Science\\
+Technical University of Cluj-Napoca\\
+\includegraphics[width=10cm]{fig/footer}
+\end{center}
+\vspace{1cm}
+%\maketitle
+\begin{center}
+\begin{Large}
+ \textbf{Artificial Intelligence II}\\
+\end{Large}
+\textit{Laboratory activity 2015-2016}\\
+Name: Ichim Daniel Alexandru\\
+Group: 30232\\
+Email: ichim.daniel.alexandru@gmail.com\\
+Laboratory assistant: Roxana Szabo\\
+\vspace{15cm}
+Assoc
+. Prof. dr. eng. Adrian Groza\\
+Adrian.Groza@cs.utcluj.ro\\
+\vspace{1cm}
+\includegraphics[width=10cm]{fig/footer}
+\end{center}
+
+\tableofcontents
+
+\input{policy}
+
+%\chapter{Laboratory works}
+
+\chapter{AI projects and tools ($W_1$)}
+%\begin{mdframed}[backgroundcolor=blue!20] 
+The objectives for this week are:
+\begin{enumerate}
+ \item To identify existing projects for undergraduate level in the AI domain.
+\item To get awareness of the effort expected for the laboratory activity by browsing past projects at TUCN and other universities.
+\item To get used with the technical instrumentation used during this semester. 
+%That is: i) assigning the AI tool, ii) set your latex environment for writing your final report.
+\end{enumerate}
+%\end{mdframed}
+
+An ideal project should be one that demonstrates some creativity, 
+attempts to answer an interesting research question, 
+or offers an interesting AI solution to a real scenario.
+
+\section{AI undergraduate projects}
+This section aims to provide you starting ideas on student AI projects.
+Browse the following resources:  
+\begin{enumerate}
+ \item \href{http://www.akira.ruc.dk/~keld/teaching/projektforslag/ai_projects.pdf}{Project proposals in AI} at Roskilde University, Denmark
+\item \href{http://www.cs.cmu.edu/~./10701/projects.html}{Machine learning project} suggestions at School of Computer Science, Carnegie Mellon University (http://www.cs.cmu.edu/~epxing/Class/10701/project.html)  
+\item Challenges in artificial intelligence domain at \href{https://www.hackerrank.com/domains}{HacckerRank}
+\item Repository of AI assignments at \href{http://modelai.gettysburg.edu/}{AI-repository}
+\item Collection of projects at MIT open coursware for the Knowledge-Based Applications Systems class
+\href{http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-871-knowledge-based-applications-systems-spring-2005/projects/}{MITOpenCoursware}
+\end{enumerate}
+
+The projects are intended to let you look in depth at some area of artificial intelligence 
+that may only be covered briefly in class or AIMA. 
+You can see the AI lab as an opportunity for you to explore an interesting problem of your choice in the context of a real-world scenario.
+Hence, we encourage you to do some original research in the AI domain that is of interest to you. 
+To give you an idea, about how your fellows work as students, take a look at the examples below:
+
+Here is a list of project ideas:
+
+\begin{enumerate}
+ \item A machine learning approach for identifying patterns at Eurovision musical competition. 
+\item Performance comparison of AI algorithms in the Wumpus world.
+\item A multi-agent system for playing the board game Risk. Assess the
+relative strength of each player and the strategic value of each country. 
+\item Intersection situation awareness and normative reasoning.
+\item Summarize an article written in wikipedia or other technical text.
+\item Checking if a small text is entailed by a larger text.
+\item Extracting arguments in a persuasive or legal text.
+\item A knowledge-based computer purchasing adviser.
+\item Build an ontology from a collection of documents using machine learning.
+\item Legal assistant in case of divorces. Splitting marital property between spouse.
+\item Advisor for installing a wind turbine.
+\item Compliance checking of architectural plans for buildings.
+\item Knowledge based system for automobile fault diagnosis .
+\item Real Estate Analyzer System. 
+ 
+\end{enumerate}
+
+ 
+%Sample projects at TUCN are:
+
+%\begin{enumerate}
+% \item 
+%\end{enumerate}
+
+
+Projects at other universities:
+\begin{enumerate}
+ \item A project submitted by Greg Barish entitled "Approaches to integrating abstractions in graphplan-based planning systems" for the Artificial Intelligence Planning class at University of Southern California.
+\href{http://www.isi.edu/~blythe/cs541/Projects/barish.pdf}{Final Report}
+\item A project submitted by Victor L. Williamson entitled ``What to do With a Patient Who Has
+Chest Pain?'' \href{http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-871-knowledge-based-applications-systems-spring-2005/projects/william_cp_ches.pdf}{Final report}
+()
+
+\end{enumerate}
+
+\section{AI-related competitions}
+As part of your laboratory work, we encourage you to participate to various students competitions in AI:
+
+\begin{enumerate}
+\item Machine learning competitions: \href{https://www.kaggle.com/}{Kaggle}
+\item Ontology development competition: \href{http://fois2014.inf.ufes.br/p/call-for-ontology-competition.html}{Ontology Competition}
+\item Competition on computational models of argumentation: \href{http://argumentationcompetition.org/}{ICCMA}
+\item Competitive programming \href{https://www.hackerrank.com/domains}{HacckerRank}
+\item Student StarCraft AI tournament 2016 \href{http://sscaitournament.com/}{SSCAIT}
+\item Power trading agent competition \href{http://www.powertac.org/node/39}{PTAC}
+\item Ontology alignment evaluation initiative \href{http://oaei.ontologymatching.org/2015/}{OAEI2015}
+\end{enumerate}
+
+\paragraph{Disseminating your work.}
+ Presenting your results at student conferences increases your chances to obtain a master scholarship:
+
+\begin{enumerate}
+ \item Computer Science Students Conference at UBB and TUCN: 
+ \href{http://cs.utcluj.ro/csd/site/index.html}{CSSC}
+\end{enumerate}
+
+
+\section{Running latex}
+
+\href{http://cs-gw.utcluj.ro/~srazvan/articleSchema.tgz}{Very Brief Introduction to Latex} by Radu Slavescu
+
+\section{Linux support}
+
+\href{http://cs-gw.utcluj.ro/~srazvan/articleSchema.tgz}{Brief Synopsis of Linux} by Radu Slavescu
+
+
+\chapter{Installing the tool ($W_2$)}
+%\begin{mdframed}[backgroundcolor=blue!20] 
+The objectives for this week are:
+\begin{enumerate}
+ \item To install the tool on a Linux system
+\item To get aware of tool plugins, extensions, and running parameters.
+\end{enumerate}
+%\end{mdframed}
+
+\section{Downloading GATE}
+To download GATE point your web browser at \href{http://gate.ac.uk/download/}{http://gate.ac.uk/download/}
+
+\section{Installing and Running GATE}
+GATE will run anywhere that supports Java 7 or later, including Solaris, Linux, Mac OS
+X and Windows platforms.  This time we installed the tool on Fedora (Linux). \\
+
+\begin{enumerate}
+\item Download the \href{http://sourceforge.net/projects/gate/files/gate/8.1/gate-8.1-build5169-installer.jar/download}{Generic installer for any platform}. This is a JAR file, so it will require Java to be ran.
+\item Go to the location of the downloaded file and open the terminal in the specific folder. 
+\item Write the following command (replace the gate name with your current version that you downloaded).
+      \begin{verbatim} 
+	java -jar gate-8.1-build5169-installer.jar  
+      \end{verbatim}
+\item Follow the installation process within the visual installer, setting the location and some configuration for installing.
+\item After installing, in order to run gate you have to go in the installation folder, then open the bin folder. And run the following command in the terminal, within this folder.
+
+\begin{verbatim}
+    ./gate.sh
+\end{verbatim}
+
+
+\section{Configuring GATE}
+When GATE Developer is started, or when Gate.init() is called from GATE Embedded,
+GATE loads various sorts of configuration data stored as XML in files generally called
+something like gate.xml or .gate.xml. This data holds information such as:
+
+\begin{itemize}
+ \item whether to save settings on exit; 
+ \item whether to save session on exit;
+ \item what fonts GATE Developer should use;
+ \item plugins to load at start;
+ \item colours of the annotations;
+ \item locations of files for the file chooser;
+ \item and a lot of other GUI related options;
+ \\
+ \\
+ \\
+ 
+This type of data is stored at two levels (in order from general to specific): 
+ \item the site-wide level, which by default is located the gate.xml file in top level directory 
+of the GATE installation (i.e. the GATE home. This location can be overridden by the 
+Java system property gate.site.config; 
+ \item the user level, which lives in the user’s HOME directory on UNIX or their profile 
+directory on Windows (note that parts of this file are overwritten when saving user 
+settings). The default location for this file can be overridden by the Java system 
+property gate.user.config.\end{itemize}
+
+\end{enumerate}
+
+\section{Uninstalling GATE}
+
+For the uninstaller, you have to run the following command:
+\begin{verbatim}
+java -jar uninstaller.jar
+\end{verbatim}
+
+or just delete the whole of the installation directory (the one containing bin, lib, Uninstaller,
+etc.). The installer doesn’t install anything outside this directory, but for completeness you
+might also want to delete the settings files GATE creates in your home directory (.gate.xml
+and .gate.session).
+
+
+\chapter{Running and understanding examples ($W_3$)}
+%\begin{mdframed}[backgroundcolor=blue!20] 
+The objectives for this week are:
+\begin{enumerate}
+ \item To run and understand the toy examples provided by the tool
+\item To identify what realistic problems are adequate for your tool 
+\end{enumerate}
+%\end{mdframed}
+
+
+GATE includes an information extraction system called ANNIE (A Nearly-New Information Extraction System) which is a set of modules comprising a tokenizer, a gazetteer, a sentence splitter, a part of speech tagger, a named entities transducer and a coreference tagger. ANNIE can be used as-is to provide basic information extraction functionality, or provide a starting point for more specific tasks.
+
+\section{Example 1 - Using Part of Speech (POS) features to extract entities}
+
+Let’s say that we want to identify a sports location through its context. For example,
+identifying a stadium location where the word “Stadium” is used in various
+combinations, i.e. “Emirates Stadium”, “Wembley Stadium”, and “Ben Hill Griffin
+Stadium”. We will have to consider these generalities to write a generic rule that is
+applicable in all these contexts.\\
+
+
+\textit{“The sound of the Millennium Stadium when a crowd is watching a football or rugby
+match is amazing. If you sit right at the back of a full stadium, you can experience a
+tidal wave of cheering approach you from the other side. Invisible, but just as infectious.}
+\\
+
+
+True positives we are after: Millennium Stadium, Sardar Patel Stadium, Emirates Stadium, Wembley Stadium, Ben Hill Griffin Stadium.
+\\
+\\
+False positive we want to ignore are: Stadium
+\\
+We can use POS features to achieve the desired results. We know that word
+“Stadium” can be used in conjunction with one or two words (Emirates or Ben Hill
+Griffin) that must be in upper initial letters, is represented as Token word
+(Token.kind== “word”) and is a Noun hence Token.category=NNP (Noun singular)
+or NNPS (Noun Plural).
+\\\\
+
+The jape grammar that achieves required objectives is: ~\ref{sec:background}
+\\\\
+Let’s understand how this is achieved. Loop 1 is the whole pattern we are trying to match and consist of pattern 2 and pattern 5. 
+\\\\
+Loop2 consists of two patterns: patterns 3 and 4. Let’s see what it tries to find. Loop3 is looking for {any word, with NNP and upperinital or anyword, with NNPS and upperinital} this will match {Millennium, Sardar, Emirates, Wembley, Ben} from our example.
+\\\\
+Now lets move on to pattern 4, which is repetition of pattern in 3. However notice the presence of “?” at the end meaning optional. Basically, we want to capture the possibility of having two words before the word “Stadium”. Using loop 3 and 4 in loop 2 will match further { Sardar Patel, Ben Hill} from our examples however{Millennium , Emirates, Wembley} will use ? and escape any matching.
+\\\\
+After Loop 2 is run, loop 5 runs, which basically further exploits possibility of another word. Again there is ? to indicate the optional nature of this loop. Hence this time it will match as follows for our running example: 
+\\\\
+{Ben Hill Griffin}, while for others it will be optional.
+\\\\
+Hence when the outer loop runs it detects following:
+\\\\
+{Millennium, Sardar Patel, Emirates, Wembley, Ben Hill Griffin}
+\\\\
+Now the rest of the program is straightforward, we are trying to make sure that there is a {Stadium, Circuit, Golf Club} word suffix at the end of this.
+\\\\
+
+
+\section{Example 2 - 3-stage procedure using the tokeniser, gazetteer and named-
+entity grammar}
+
+
+An example of a 3-stage procedure using the tokeniser, gazetteer and named-
+entity grammar. Suppose we wish to recognise the phrase ‘800,000 US dollars’ as an entity
+of type ‘Number’, with the feature ‘money’.
+
+
+First of all, we give an example of a grammar rule (and corresponding macros) for money,
+which would recognise this type of pattern.
+
+\begin{verbatim}
+ Macro: MILLION_BILLION
+({Token.string == "m"}|
+{Token.string == "million"}|
+{Token.string == "b"}|
+{Token.string == "billion"}
+)
+
+Macro: AMOUNT_NUMBER
+({Token.kind == number}
+(({Token.string == ","}|
+{Token.string == "."})
+{Token.kind == number})*
+(({SpaceToken.kind == space})?
+(MILLION_BILLION)?)
+)
+
+Rule: Money1
+// e.g. 30 pounds
+(
+(AMOUNT_NUMBER)
+(SpaceToken.kind == space)?
+({Lookup.majorType == currency_unit})
+)
+:money -->
+:money.Number = {kind = "money", rule = "Money1"}
+\end{verbatim}
+\subsection{Step 1 - Tokenisation}
+
+The tokeniser separates this phrase into the following tokens. In general, a word is comprised
+of any number of letters of either case, including a hyphen, but nothing else; a number is
+composed of any sequence of digits; punctuation is recognised individually (each character
+is a separate token), and any number of consecutive spaces and/or control characters are
+recognised as a single spacetoken.
+
+\begin{verbatim}
+ Token, string = ‘800’, kind = number, length = 3
+ Token, string = ‘,’, kind = punctuation, length = 1
+ Token, string = ‘000’, kind = number, length = 3
+ SpaceToken, string = ‘ ’, kind = space, length = 1
+ Token, string = ‘US’, kind = word, length = 2, orth = allCaps
+ SpaceToken, string = ‘ ’, kind = space, length = 1
+ Token, string = ‘dollars’, kind = word, length = 7, orth = lowercase
+\end{verbatim}
+
+
+\subsection{Step 2 - List Lookup}
+
+The gazetteer lists are then searched to find all occurrences of matching words in the text.
+It finds the following match for the string ‘US dollars’:
+Lookup, minorType = post\_amount, majorType = currency\_unit
+
+
+
+
+
+
+
+
+\subsection{Step 3 - Grammar Rules}
+
+
+
+The grammar rule for money is then invoked. The macro MILLION\_BILLION recognises
+any of the strings ‘m’, ‘million’, ‘b’, ‘billion’. Since none of these exist in the text, it passes
+onto the next macro. The AMOUNT\_NUMBER macro recognises a number, optionally
+followed by any number of sequences of the form‘dot or comma plus number’, followed
+by an optional space and an optional MILLION\_BILLION. In this case, ‘800,000’ will be
+recognised. Finally, the rule Money1 is invoked. This recognises the string identified by the
+AMOUNT\_NUMBER macro, followed by an optional space, followed by a unit of currency
+(as determined by the gazetteer). In this case, ‘US dollars’ has been identified as a currency
+unit, so the rule Money1 recognises the entire string ‘800,000 US dollars’. Following the rule,
+it will be annotated as a Number entity of type Money:\\
+Number, kind = money, rule = Money1
+
+
+
+
+
+
+
+
+
+
+\chapter{Understanding conceptual instrumentation ($W_4$)}
+
+GATE includes resources for common LE data structures and algorithms, including doc-
+uments, corpora and various annotation types, a set of language analysis components for
+Information Extraction and a range of data visualisation and editing components.
+\\\\
+GATE supports documents in a variety of formats including XML, RTF, email, HTML,
+SGML and plain text. In all cases the format is analysed and converted into a sin-
+gle unified model of annotation.
+\\
+\\
+\\
+
+\begin{algorithm}
+\label{alg:eval}
+\caption{Required steps for annotating a specific text.}
+
+\KwIn{$\mathcal{T}$ - set of texts on different formats
+      $\mathcal{W}$ - a JAPE grammar rules for annotation creation; 
+      $\mathcal{X}$ - a gazetteer list}
+\KwOut{$\langle annotated..text \rangle$, the original text but annotated with the rules provided by the JAPE grammar file}
+
+%$\mathcal{W_D}\leftarrow Update(\mathcal{W}, Wordnet)$ %\Comment{Wordnet supports the extension of keywords of the domain}
+
+\ForEach{$t\in \mathcal{T}$}{$DocumentReset(t,t1)$} %If results are not satisfactory, improve data at step 1 %TODO formula. 
+
+\ForEach{$t1\in \mathcal{T}$}{$EnglishTokeniser(t1,t2)$} %If results are not satisfactory, improve data at step 1 %TODO formula. 
+
+\ForEach{$t2\in \mathcal{T}$}{$SentenceSplitter(t2,t3)$} %If results are not satisfactory, improve data at step 1 %TODO formula. 
+
+\ForEach{$t3\in \mathcal{T}$}{$POSTagger(t3,t4)$} %If results are not satisfactory, improve data at step 1 %TODO formula. 
+
+\ForEach{$t4\in \mathcal{T}$}{$Gazetteer(t4,X,t5)$} %If results are not satisfactory, improve data at step 1 %TODO formula. 
+
+\ForEach{$t5\in \mathcal{T}$}{$TrandsducerJAPE(t5,W,t6)$} %If results are not satisfactory, improve data at step 1 %TODO formula. 
+
+\ForEach{$t6\in \mathcal{T}$}{display each t6 (being the annotated text)} %If results are not satisfactory, improve data at step 1 %TODO formula. 
+
+
+
+%Define a \textit{domain coverage threshold} $\delta$ $\geq$ 0 
+
+%$\mathcal{O}_{\delta} \leftarrow Select(\mathcal{O},\delta)$
+%TODO use algorithm syntax
+
+%\ForEach{ $o \in\mathcal{O}_{\delta} $}{
+%\ForEach{non-leaf criterion $k \in \mathcal{T}$}{complete the $PC$ matrix to determine the weights of its sub-criteria}
+
+
+%\ForEach{leaf (atomic) criterion $k \in \mathcal{T}$}{$OntologyMetrics(k,o)$}
+%TODO alternatives normalization
+
+%Normalize ontology measurements to obtain weights for alternatives
+
+%$WeightedSum(o,PC)$
+\end{algorithm}
+
+
+
+\chapter{Project description ($W_5$)}
+%\begin{mdframed}[backgroundcolor=blue!20] 
+The objectives for this week are:
+\begin{enumerate}
+ \item To have a clear description of what you intend to develop.
+\item To point to specific resources (datasets, knowledge bases, external tools) 
+that support the development of your idea and which minimise the risk of failure.
+\item To identify related work (articles) that are relevant or similar to your approach.
+\end{enumerate}
+%\end{mdframed}
+
+
+Realistic and original scenarious are encouraged. 
+Well known toy problems (salesmen, map coloring, logistic planning, wumpus, sudoku, queens, missionaires and canibals, etc.) do not worth much for your grade. 
+Your scenario should be realistic and should be business oriented. 
+Note that the focus is both on programming and on modelling the reality into a formal representation.
+
+Consider answering to the following questions:
+\begin{enumerate}
+ \item What will your system do?
+\item Which is the scope of coverage your system aims for?
+\item What will be the input of your program?
+\item What will be the output of your program?
+\item What will be the knowledge of your system?
+\item Which would be the narrative description of running scenario(s)?
+\end{enumerate}
+
+\begin{example}[What will system do]
+ 
+\end{example}
+
+\begin{example}[Scope of the program]
+ 
+\end{example}
+
+
+\section{Narrative description}
+The project that i will develop around the GATE tool, will be about the concept of opinion mining/sentiment analysis. More specifically, i will try to use text processing for identifying consumers reviews, the domain that i will target, will be product reviews on different online shopping websites. The reviews of the consumers will be annotated and classified as positive, negative or neutral. 
+
+\section{Specifications}
+List of specifications.
+
+The applications that can be built around the concept of sentiment analysis are diversified: business intelligence, opinion mining, reputation monitoring etc. The main problems that are we facing when using opinion mining.\\
+	\begin{itemize}
+	 \item identyfing opionated segments of text.
+	 \item identyfing the opinion-holder.
+	 \item identify the argumentative structures that separates different arguments
+	 \item classifying the opinion(positive, negative, neutral).
+	\end{itemize}
+
+	The preprocessing of the text will be done using the ANNIE built in processing resources, the tokeniser, sentence splitter, pos tagger, gazetteer.\\
+	The reviews on the text will be identified using the JAPE grammar loaded into a Transducer, those reviews will be processed and classified as positive/negative/neutral. We can also identify the date of the review, or the author name, if one exists.
+	
+\section{Top level design of the scenario}
+The final application will be made using some processing resources provided by GATE tool (the ANNIE plugin), and using grammar JAPE files for identifying the specifications. The result will be an annotated text, which will highlight the user reviews based on their arguments.\\
+\\
+
+
+\section{Knowledge acquisition}
+
+The documents that hold the data for processing, will be HTML \/ TXT \/ XML files from some online shopping websites, like Amazon, if the HTML format will be supported. After converting the HTML pages into GATE documents, we will label each review with a comment annotation, also pointing out the arguments of the reviews, positive or negative.\\
+
+\paragraph{How do represent knowledge?} 
+Your system relies on a knowledge base.
+You have to describe how do you represent this knowledge.
+You might choose between different logics: 
+propositional logic, first order logic, modal logics, description logics, epistemic logics, 
+temporal logics, and so on. 
+
+\paragraph{Where are you getting the required knowledge/data}
+Point towards the knowledge bases that you plan to exploit. 
+The existence of these sources are required to prove that your approach is realistic.
+
+Examples of knowledge sources include:
+\begin{itemize}
+\item Data sets: i.e., https://archive.ics.uci.edu/ml/datasets.html 
+\item Statistics: i.e., http://ec.europa.eu/eurostat 
+\item Ontology repositories 
+\end{itemize}
+
+
+If you will be using books give their reference. 
+If you hope to exploit people give their names.
+If you aim to use data sources or knowledge repositories list them and be sure that you have 
+access to the needed knowledge. Indicate what you have accomplished so far in knowledge acquisition. 
+
+
+
+\section{Related work}
+\label{sec:relw}
+\begin{itemize}
+ \item \href{https://lirias.kuleuven.be/bitstream/123456789/234784/1/mochalesmoensicail09.pdf}{Argumentation Mining: The Detection, Classification and
+Structure of Arguments in Text}
+
+  The paper Argumentation Mining: The Detection, Classification and Structure of Arguments in text, introduce some fundamental knowledge about the concept of argumentation mining. Argumentation is t
+he process of constructing arguments and handling them. Argumentation constitutes a major component of human intelligence. The purpose of argumentation mining, is to detect arguments from a text document, identify the relations 
+made between them and also an internal structure for every argument individually. This paper analyses the main research questions when dealing with argumentation mining. 
+\\\\
+           First is presented the motivation of work, for this research on argumentation mining. Then, it is defined and motivated the formalism of argumentation used in their research, including knowledge on rhetorical 
+structure, argumentation and natural language processing. Finally, it is discussed different problems encountered, when dealing with argumentation mining. For each problem it is analyzed and evaluated the possible solutions in 
+both legal and non-legal domain texts. 
+\\
+ \item  \href{http://www.arg.dundee.ac.uk/people/chris/publications/2015/ArgMining2015.pdf}{John Lawrence and Chris Reed. Combining argument mining techniques.}
+ 
+ %In this article are presented 3 methods of argumentation mining (argumentative text extraction): Discourse Indicators, Topical Similarity, Argumentation Scheme Structure and all of these combined.
+
+           The second paper that I have read regarding this topic of argumentation mining is, Combining Argument Mining Techniques by John Lawrence and Chris Reed. This paper, presents different methods of extracting the argumentative structure from a piece of natural language text. Those methods 
+cover linguistic features, changes in the topic being discussed and a supervised machine learning approach to identify the components of argumentation schemes, patterns of human reasoning which have been detaile
+d extensively in philosophy and psychology. For each of these approaches they achieved results comparable to those previously reported. Finally the results from these individual techniques, applied in combination, 
+for further improving the argument structure identification. 
+\\          
+ \item \href{http://jodischneider.com/pubs/frontiersargnlp2014.pdf}{Jodi Schneider. An informatics perspective on argumentation mining.}
+ 
+ %Different methods used in argumentation mining, and the state of the art for machine learning, and its integration with argumentation mining.
+            The third paper that I will be referring to is, An Informatics Perspective on Argumentation Mining by Jodi Schneider. This paper is introduced with a 
+series of important questions on the task of argumentation mining,then we are presented a knowledge representation section, which describes some models for structured representation of arguments, that are used in the 
+current ontologies based on argumentative texts.
+\\
+\\
+           The section that I was mostly interested in was, the task of Mining from Social Media. To identify arguments in social media, there are some specific things that might be considered: the intention of the author might 
+be relevant, the type of messages,  whether they are instruction, information, discussion, recreation or recommendation. Also the genre, metadata, properties of users, goals of a particular dialogue, sentiment and subjectivity might be relevant. 
+
+\end{itemize}
+
+\section{Scenario Details}
+           As previously stated, my approach for studying GATE use on argumentation mining, is the challenge to find user reviews
+ from a piece of text, and classify them as positive or negative, based on the user review, and 
+also to identify the argumentative components for those piece of texts. I will use the GATE Java API, within Eclipse for developing my project.  
+           \\\\
+           Firstly I will do a preprocessing on the web page, using the ANNIE plugins, I will run the following PIPELINE based application, tokeniser, sentence splitter, pos tagger and gazetteer. Using the JAPE grammar boundary rules I will identify the comments section for each user, and creating an annotation 
+set with every comment that I will find. 
+	  \\\\
+           Within the previously annotated set I will try to identify the argumentative connectors used in reviews, for separating the positive facts from the negative ones, for a specific product. After identifying the connectors, 
+I will annotate the words that reflect a positive opinion on a product, and separately the words reflecting a negative one.  
+	  \\\\
+	  The input data for the GATE application will be an HTML file relevant to the topic of online shopping websites, and some JAPE grammar files that will be used for creating annotations. One JAPE grammar file will be used for separating user comments, i will use two boundary tokens for detecting comments, another JAPE grammar file will be used for annotating the relevant words for identifying positive and negative comments, and also the argumentative connectors between arguments of the review. 
+	  \\
+	  The output of the GATE application will be an annotated document corpus.
+	  \\
+
+\chapter{Implementation details}
+%\begin{mdframed}[backgroundcolor=blue!20] 
+The objectives for this week are:
+\begin{enumerate}
+ \item Illustrate each aspect of the reality that you have modelled in your solution.
+
+ \begin{enumerate}
+  \item The solution provided, is a basic application used to scrape comments from an Amazon review webpage of a product. The comment is extracted using the relevant tag provided in the HTML code of the webpage, using a JAPE transducer.
+  \item Comments are classified as positive or negative based on different criteria.
+  \item The comments are extracted in a CSV file, that can be used by the product support employee to understand the needs of the users, and also to review critical opinions on their products.
+ \end{enumerate}
+
+ 
+ \item To explain the relevant code from your scenario.
+
+
+\end{enumerate}
+%\end{mdframed}
+
+\section{Relevant code}
+
+%Provide the relevant code (see an example in Fig.~\ref{fig:code}).
+\subsection{Jape Code}
+  The main objective of the Jape code is to provide grammar rules for identifying different segments of text, and also for creating new annotations on relevant keywords / segments. I have separated my grammar into 6 Jape files, each one being used for a separate task.
+  
+  \begin{enumerate}
+   \item The 'title.jape' file used for identifying the product title on the HTML page, based on the specific tag.  \hyperref[sec:jape1]{SourceCode}
+   \item The 'comments.jape' file used for the purpose of identifying comments within the HTML file. \hyperref[sec:jape2]{SourceCode}
+   \item The 'goodAdjective.jape' file used to identify the words that would cause a comment to be more likely positive than negative. And the 'positiveComments.jape' file used with the positive adjectives, to identify the positive comments. \hyperref[sec:jape3]{SourceCode}
+   \item The 'badAdjective.jape' file and the 'negativeComments.jape' file, are similar to the ones provided above, excepting the fact that the last one is using another gazetteer for finding the bad adjectives, relevant for the negative comments.
+  \end{enumerate}
+\subsection{Gate Java Code}
+  I developed my small application in Java, where i'm initiating and running the Gate tool, also loading the specified resources needed for processing and the documents from the dataset, that must be saved on the local computer, in the 'data' folder of the Java application.
+  Some of the relevant Java code used for creating this application is described below:
+  \begin{enumerate}
+   \item For initializing and loading the processing resources needed. My application is using the ANNIE plugin, more specifically the Tokeniser and the Gazetteer. \hyperref[sec:java1]{ExampleCode}
+   \item The datasets used are loaded into Gate for further processing. \hyperref[sec:java2]{ExampleCode}
+   \item The annotations created by the Jape grammar are manipulated, being saved for further processing. In our case, we are saving them on a CSV file. \hyperref[sec:java3]{ExampleCode}
+ 
+    The classes used for developing the functionalities:
+    \begin{itemize}
+      \item LoadPRCLass.java - used for loading the processing resources needed into our application.
+      \item DocumentProcessorClass.java  - used for iterating over the documents on the dataset and applying the processing resources specified in the previous class.
+      \item WriteXLSClass.java - used for exporting the annotations created in the previous class, for each document, creating a new CSV row, where we are saving the following things: number of comments, number of positive comments, number of negative comments, title of the product, and followed by the comments for each product.
+    \end{itemize}
+
+ \end{enumerate}
+
+\begin{comment}
+\begin{figure}
+\begin{verbatim}
+(full-reset)
+(instance a Argument)
+(related a b attacks)
+(concept-instances Argument) 
+\end{verbatim}
+\caption{Modelling arguments in Racer.}
+\label{fig:code} 
+\end{figure}
+
+
+
+\section{Common bad practice in AI undergraduate projects}
+
+\paragraph{The over-estimated AI programmer.} $ $
+
+{\it Bad practice}: Excepting few genial students, you tend to overestimate your AI-programming abilities. 
+That is, you start to write a large amount of code. (Here large might be 20 lines).
+When testing it, nothing run. 
+You start to debug a line or to remove it.
+Your program will not run this time too. 
+You remove or comment another line. 
+And so on, until you have a single line of code.
+If you are lucky, that could run. 
+But you lose a lot of time in this enterprise.
+
+{\it Solution}: In the early stage of writing code, write a line of code and test it. 
+If it works, write another line and test it. 
+And so on. 
+That is, you are exploiting the interactive environments provided by 
+AI tools or languages like LISP and PROLOG.
+You should hold your horses and 
+have the most possible skeptical attitude towards your code.  
+As you get experience, your will be noticing that writing 
+AI-declarative code is more effective than procedural one.  
+
+
+\paragraph{The eyewash bug.} $ $
+{\it Bad practice}: You spend most of your programming time to develop a GUI for your AI-system. 
+Don't bother. I am sympathetic with Sania Twain's view on GUIs: "You don't impress me much".
+Such things are indeed important in computer science, but not relevant in this AI class.
+
+
+%\paragraph{The stucker bug} 
+
+\paragraph{The not-organised student.}
+You are not organised, if something like this will happen to you:
+\begin{itemize}
+ \item You do not find your project and yield "Someone removed my project!". 
+Most of the time your are logged with a different user as usual. 
+Check this with \texttt{who am i}. 
+This is not a rhetorical question, but a Linux command.
+\item You are working in a different directory. 
+Type \texttt{pwd} and \texttt{ls} to check that your executables are indeed in the current working directory.
+If you have been lasy to set your PATH variable, you might just forgot to type \texttt{./} 
+for executing the command in the current directory.
+\end{itemize}
+
+\end{comment}
+
+\chapter{Tool expressivity ($W_{11}$)}
+
+
+%\begin{mdframed}[backgroundcolor=blue!20] 
+\begin{enumerate}
+ \item Gate - as a General Architecture Text Processing is a powerfull tool for natural language processing, having a lot of features, plugins, and with plenty of applications in the real world. In my application I have managed to touch a small amount of the full potential of the tool.
+ \item The Plugin that i have used for performing my task, is the ANNIE plugin that is providing a vast amount of functionalities. Firstly I had to separate the text into tokens before further processing, this step was possible using the Tokeniser provided in the Annie plugin. The second plugin used in this project, is the Gazetteer
+ provided also in the ANNIE plugin. I created two new gazetteers, one for positive adjectives and another one for negative adjectives, using the words defined within those gazetteers to identify the positive and the negative comments.
+ \item Another feature provided by the Gate tool, is the Jape Transducer, I have used this for defining my grammar needed to identify the opionated segments of text.
+ \item Managing the datasets is another good point of Gate, being able to create a Corpus from the documents provided. This corpus being processed by the processing resources within the program. Gate is using a PIPELINE based application, doing each processing step by step, in the order provided by the user.
+\end{enumerate}
+%\end{mdframed}
+
+
+%For instance:
+%{\it "Racer offers also the capability to use {\it rules}. 
+%he code in Fig.~\ref{fig:rules} illustrates my rule used to create instances of type student."}
+
+
+\chapter{Graph and experiments ($W_{12}$)}
+%\begin{mdframed}[backgroundcolor=blue!20] 
+\section{Results}
+
+The following picture shows the result of running our application. We can distinguish between 4 types of annotations on the image. The RED annotation is for the title of the product
+being reviewed by the customers. The YELLOW annotations represent the positive adjectives, that are likely to indicate that the whole comment is positive, being annotated with TEAL color. The GREEN annotations, are used for comments
+in general, not being specifically positive or negative.\\\\
+\begin{figure}[H]
+ \includegraphics[width=380px,height=200px]{fig/gatepic.png}
+  \caption{Test 1 - Finding Positive Comments}
+\end{figure}
+
+
+
+The picture below, shows an example of finding an negative comment, using the adjectives provided in the negative adjective gazetteer. Note that if a comment contains positive and negative adjectives, it will be classified both as positive and negative.
+\begin{figure}[H]
+ \includegraphics[width=380px,height=200px]{fig/gatepic2.png}
+  \caption{Test 2 - Finding Negative Comments}
+\end{figure}
+
+
+The last image, display annotated text of a combination between positive and negative comments.
+\begin{figure}[H]
+ \includegraphics[width=380px,height=200px]{fig/gatepic3.png}
+  \caption{Test 3 - Finding Negative/Positive Comments}
+\end{figure}
+
+
+\chapter{Related Work and Discussion ($W_{13}$)}
+%\begin{mdframed}[backgroundcolor=blue!20] 
+The objectives for this week are:
+\begin{enumerate}
+ \item To compare your results to related work.
+\item To discuss the advantages and limitations of your solution.
+\end{enumerate}
+%\end{mdframed}
+
+
+Identify and describe other solutions for solving the same scenario like yours.
+For instance: \cite{chesnevar:Survey2000}
+
+\section{Related approaches}
+
+The related approaches that I have discussed in the \hyperref[sec:relw]{Related Work} section, were mostly based in the topic of argumentation mining as a general thing. Identyfing the argumentative structures of the text based on different criteria, was the main topic of discussion in those papsers. My approach is using just basic functionalities of Gate for identifying the opionated segment of text, not classifying it as a structure having premises / arguments / conclusion, as it was explained in those papers.
+
+\section{Advantages and limitations of your solution}
+\label{sec:lim}
+  \begin{itemize}
+  
+  \item{Advantges}
+  \begin{enumerate}
+   \item  The solution developed for this scenario is very simple and easy to undestand. I am using the basic functionalities of Gate for retrieving comments from text. The technique appplied for mining comments, is not very complicated, it's based only on identifying the positive/negative adjectives inside a comment and classify it based on those two criteria.
+   \item  One advantage provided in our application, is the exporting step, after identifying the comments and the product title, we can export those in a CSV file for further research. We are saving in the file the number of comments, number of positive/negative comments, title of the product and also the comments from the text. 
+
+  \end{enumerate}
+
+  
+  \item{Limitations}
+  \begin{enumerate}
+   \item   One of the main disadvantages of the solution provided, comes when treating ambiguos comments, people that may refer to other products in their review, comparing those with this one, and providing different kinds of adjectives in this comparison, so we can't really tell if they are referring to the specific product (subject of most reviews) or another one.
+   \item   Another limitation of this approach, is the fact that we are not treating the neutral comments, some of the comments might have a positive section and also a negative section, providing pros and cons about the product. Our solution, will identify this kind of comments, both as positive and negative.
+   \item   When it comes to data source, another problem that we are facing, is about the size of the HTML source file that must be processed. Before running the tokeniser on the source files, we have to separate the part of the HTML files, saving only the relevant information needed, in our case we need the header part of the HTML file where the title is contained, and the comment section. If we are processing the whole HTML file, this will take a lot of time, and even running out of memory, because Gate is storing all the annotations that we are creating on the heap.
+  
+  \end{enumerate}
+  
+    \end{itemize}
+  
+
+\section{Possible extensions of the current work}
+
+The current solution is just a template for a further more complicated comment minining approach. We can add plenty of new functionalities, that would improve our review retrieval technique, and also the review classifying part of the application, providing more accurate classification. Some of the improvements that will point out are listed below.
+\begin{itemize}
+ \item Adding support for multiple websites, this can be done by changing the comment Jape file, adding the new tag-value identification approach for the specified website.
+ \item Classifying the reviews based on the user rating value, a lot of websites provide a system to rate a product after making a review, we can take advantage of those rating for further processing of our reviews, classifying them as positive/negative based on this criteria.
+ \item As we presented in the \hyperref[sec:lim]{Limitations} section, our current system approach when detecting comments is based only on the adjectives presented in the comment, we can change this to provide a wider approach, classifying only one sentence from the review as positive/negative based on the content.
+ \item Introducing a new category of comments, 'Neutral' comments, those annotations will be created when the reviewer is referring to the good and to the bad parts of the product.
+ \item Improving the mechanism for classifying comments, using other approaches, not only adjectives. For example we can give a review a grade from -1 to 1, where -1 means the comment is negative and 1 means the comment is positive. For calculating this grade, we can check the kind of sentences in the review (exclamative/affirmative), the attitude of the reviewer aggressive using multiple verbs, the argumentative connectors but//although/... .
+ 
+\end{itemize}
+
+
+\chapter{Documentation ($W_{14}$)}
+%\begin{mdframed}[backgroundcolor=blue!20] 
+The objectives for this week are:
+\begin{enumerate}
+ \item To deliver a professional documentation of your work.
+\end{enumerate}
+%\end{mdframed}
+
+This template (filled of course).
+
+
+\appendix
+
+\chapter{Your original code}
+
+This section should contain only code developed by you, without any line re-used from other sources. 
+This section helps me to correctly evaluate your amount of work and results obtained. 
+Including in this section any line of code taken from someone else leads to failure of IS class this year.
+\section{Jape Code}
+
+\subsection{Title Jape Code}
+\label{sec:jape1}
+           
+   \begin{verbatim}
+     
+   Phase: TitleFinder
+   Input: Token
+   Options: control = first
+   Rule: TitleFind
+   (
+   	{Token.string == "title"}
+   	{Token.string == ">"}
+   	({Token})* :value
+   	{Token.string=="<"}
+   )
+   -->
+   :value.ProductName ={title=:value@cleanString} 
+   \end{verbatim}
+
+\subsection{Comments Jape Code}
+\label{sec:jape2}
+  \begin{verbatim}  
+   Phase: ValueFinder
+   Input: Token
+   Options: control=first
+   Rule: Value
+   (
+   	{Token.string=="review-text"}
+   	{Token.string=="\""}
+   	{Token.string==">"}
+   	({Token})* :value
+   	{Token.string=="<"}
+   	{Token.string=="/"}
+   	{Token.string=="span"}
+   )
+   -->
+   :value.CommentContent = {string=:value@cleanString}
+  \end{verbatim}
+
+  
+\subsection{Positive Comments Jape Code}
+\label{sec:jape3}
+  \begin{lstlisting}
+  
+  Phase: AdjectiveFinder
+  Input: Lookup Token
+  Options: control = brill
+  Rule: PosAdj
+  (
+	  {Token.string=="review-text"}
+	  {Token.string=="\""}
+	  {Token.string==">"}
+	  
+	  (
+		  ({Token})*
+		  ({Lookup.majorType == comment}):title
+		  ({Token})*
+	  )
+
+	  
+	  {Token.string=="<"}
+	  {Token.string=="/"}
+	  {Token.string=="span"}
+  )
+-->
+:title.GoodAdjective ={rule= PosAdj }
+  
+  
+  Phase: PositiveCommentFinder
+
+  Input: Token Lookup
+
+  Options: control = first
+
+  Rule: PosComm
+  (
+	  {Token.string=="review-text"}
+	  {Token.string=="\""}
+	  {Token.string==">"}
+	  ({Token})* :commentValue
+	  {Token.string=="<"}
+	  {Token.string=="/"}
+	  {Token.string=="span"}
+  ):CommentAnn
+  
+  -->
+  {
+	  AnnotationSet CommentAnnotation = (AnnotationSet) bindings.get("commentValue");
+	  
+	  //get goodAdjective from the input comment annotation , itf exists make it a positive comment
+	  AnnotationSet PosAdj = inputAS.get("GoodAdjective", CommentAnnotation.firstNode().getOffset(), CommentAnnotation.lastNode().getOffset());
+	  
+	  if (PosAdj.size() != 0 ) {
+		  FeatureMap features = Factory.newFeatureMap();                  
+		  outputAS.add(CommentAnnotation.firstNode(), CommentAnnotation.lastNode(), "PositiveComment", features);
+	  }
+}
+ 
+  \end{lstlisting}
+
+
+
+
+\chapter{Other Relevant Code}
+
+
+\section{Example 1 - Jape Grammar}
+\label{sec:background}
+
+
+
+\begin{verbatim}
+ 
+ 
+ Phase: locationcontext1
+ Input:  Lookup Token 
+ Options: control = applet debug = false
+ 
+ //rule identifies stadiums/circuit/golf clubs
+ Rule: locationcontext1
+ Priority:50
+ (
+     	(
+ 	      (
+ 	  		 	 (
+ 	  		 	 	(
+ 	  		 	 	   {Token.kind == word, Token.category == NNP, Token.orth == upperInitial}
+ 	  		 	 	   |
+ 	  		 	 	   {Token.kind == word, Token.category == NNPS, Token.orth == upperInitial}
+ 	  		 	 	
+ 	  		 	 	(
+ 	  		 	 	   {Token.kind == word, Token.category == NNP, Token.orth == upperInitial}
+ 	  		 	 	   |
+ 	  		 	 	   {Token.kind == word, Token.category == NNPS, Token.orth == upperInitial}
+ 	  		 	 	)?
+ 	  		 	 )
+ 	  		 	 (
+ 	  		 	 	   {Token.kind == word, Token.category == NNP, Token.orth == upperInitial}
+ 	  		 	 	   |
+ 	  		 	 	   {Token.kind == word, Token.category == NNPS, Token.orth == upperInitial}
+ 	  		 	 )?
+ 	  		 	 
+ 	  	   )
+   		  
+ 		)
+ 		(
+ 			{Token.string =~ "[Ss]tadium"}
+ 			|
+ 			{Token.string =~ "[Cc]ircuit"}
+ 			|
+ 			(
+ 			{Token.string =~ "[Gg]olf"}
+ 			({Token}{Token})?
+ 			{Token.string =~ "[Cc]lub"}
+ 			)
+ 			|
+ 			{Token.string =~ "[Aa]rena"}
+ 	   )%\input{mycode}
+ ):location
+  -->  
+ :location.Location = {rule= "locationcontext1-locationcontext1" }
+
+\end{verbatim}
+
+
+\section{Java Relevant Code}
+\subsection{Loading Processing Resources Ex}
+\label{sec:java1}
+\begin{lstlisting}
+		//Init Gate Library
+		Gate.init();	
+		
+		// to show the GATE Developer interface
+		MainFrame.getInstance().setVisible(true);	
+		
+		File pluginDir = Gate.getPluginsHome();	// get plugins home directory
+		URL anniePlugin = new File(pluginDir, "ANNIE").toURI().toURL();	// specify plugin to be loaded
+		Gate.getCreoleRegister().registerDirectories(anniePlugin);	// finally register the plugin
+		
+		// setting up searialAnalyserController
+		SerialAnalyserController sac = (SerialAnalyserController)Factory.createResource("gate.creole.SerialAnalyserController");
+
+		// setting up processing resources, only tokeniser needed
+		ProcessingResource aEngTokeniser = (ProcessingResource) Factory.createResource("gate.creole.tokeniser.DefaultTokeniser");
+		
+		//gazetteer
+		ProcessingResource annGazetteer = (ProcessingResource) Factory.createResource("gate.creole.gazetteer.DefaultGazetteer");
+		
+		//Creating a featureMap for getting the positive adjectives
+		FeatureMap positiveAdjectiveJapeFeature = Factory.newFeatureMap();
+		positiveAdjectiveJapeFeature.put("grammarURL", new File("src/grammar/goodAdjective.jape").toURI().toURL());
+		
+		//Creating the Jape Transducer
+		LanguageAnalyser positiveAdjectivesJape = (LanguageAnalyser) Factory.createResource("gate.creole.Transducer", positiveAdjectiveJapeFeature);
+		
+		//Adding Jape Transducer to the SAC after running the Tokeniser and the Gazetteer
+		sac.add(aEngTokeniser);
+		sac.add(annGazetteer);
+		sac.add(positiveAdjectivesJape);
+\end{lstlisting}
+
+\subsection{Loading Documents Ex}
+\label{sec:java2}
+
+\begin{lstlisting}
+
+		// create a corpus for storing results
+		Corpus corpus = Factory.newCorpus("Test Data Corpus");
+		
+		// arraylist to store document resources
+		ArrayList<Document> documentResList = new ArrayList<Document>();
+		
+		FeatureMap features = Factory.newFeatureMap();
+		features.put("createdOn", new Date());
+		
+		
+		//create doc with specified params, features and unique name
+		Document doc = (Document) Factory.createResource("gate.corpora.DocumentImpl", params, features, f.getName() + "TestDoc" + i);
+		
+		//add doc to corpus
+		corpus.add(doc);
+			
+		//also maintain a list of these documents
+		documentResList.add(doc);
+\end{lstlisting}
+
+
+\subsection{Using Created Annotations}
+\label{sec:java3}
+
+\begin{lstlisting}
+//start analyzing each data from the corpus			
+for (Iterator<Document> corpIterator = corpus.iterator(); corpIterator.hasNext();) {	
+	//increment rowCount since doc row added; represents current document number
+	rowCount++;
+	
+	//get the document from corpus
+	Document corpDoc = corpIterator.next();
+					
+	//getting default set of annotations
+	AnnotationSet defaultSet = corpDoc.getAnnotations();
+					
+	//Getting annotations of Comments
+	AnnotationSet commentTypeAnnotations = defaultSet.get("CommentContent");
+					
+	//Getting ProductTitle Annotations
+	AnnotationSet titleTypeAnnotations = defaultSet.get("ProductName");
+					
+	//Getting annotations of PositiveComments
+	AnnotationSet positiveCommentTypeAnnotations = defaultSet.get("PositiveComment");
+
+	//Getting annotations of NegativeComments
+	AnnotationSet negativeCommentTypeAnnotations = defaultSet.get("NegativeComment");
+
+					
+	//ArrayList for annotations to be saved in the Excel
+	ArrayList<String> annList = new ArrayList<String>();
+					
+	//Adding the number of commentAnnotations
+	annList.add(String.valueOf(commentTypeAnnotations.size()));
+					
+	//Adding the number of positiveCommentAnnotations
+	annList.add(String.valueOf(positiveCommentTypeAnnotations.size()));
+
+	//Adding the number of negativeCommentAnnotations
+	annList.add(String.valueOf(negativeCommentTypeAnnotations.size()));
+
+					
+	//Adding the title of the product to the annList
+	if (titleTypeAnnotations.size() > 1) {
+		annList.add("NoTitle");
+	}
+	else {
+		for (Annotation titleAnnotation : titleTypeAnnotations) {
+			FeatureMap titleFeatureMap = titleAnnotation.getFeatures();
+			String titleNamesString = titleFeatureMap.get("title").toString();
+			annList.add(titleNamesString.trim());
+		}
+	}
+					
+	//iterate over these commentAnnotations and add them to list
+	for (Annotation commentAnnotation : commentTypeAnnotations) {
+	FeatureMap commentFeatureMap = commentAnnotation.getFeatures();
+	String commentString = commentFeatureMap.get("string").toString();
+	annList.add(commentString.trim());
+}
+
+rows.add(annList);
+currentDOc++;
+}
+
+\end{lstlisting}
+
+ 
+%\input{mycode}
+
+
+\mbox{}
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{bib1}
+
+
+
+\vspace{2cm}
+\begin{center}
+Intelligent Systems Group\\
+\includegraphics[width=10cm]{fig/footer}
+\end{center}
+
+
+
+\end{document}

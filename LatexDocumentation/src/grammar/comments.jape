@@ -1,0 +1,18 @@
+Phase: ValueFinder
+Input: Token
+Options: control=first
+
+Rule: Value
+(
+	{Token.string=="review-text"}
+	{Token.string=="\""}
+	{Token.string==">"}
+	({Token})* :value
+	{Token.string=="<"}
+	{Token.string=="/"}
+	{Token.string=="span"}
+)
+
+-->
+
+:value.CommentContent = {string=:value@cleanString}
